@@ -25,21 +25,37 @@ const FlexContainer = styled.div`
   }
 `;
 
+const SpaceBetween = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 const Subtitle = styled.h2`
-  color: #b396f2;
+  color: #1e205f;
+
+  @media (min-width: 640px) {
+    font-size: 32px;
+  }
+`;
+
+const Title = styled.h1`
+  color: #1e205f;
+  font-size: 31px;
+
+  @media (min-width: 640px) {
+    font-size: 48px;
+  }
 `;
 
 const Description = styled.p`
-  color: #7d7fc8;
+  color: #1a237e;
   font-size: 14px;
   line-height: 17px;
   font-weight: 500;
-  letter-spacing: -0.025em;
   display: block;
-  text-align: left;
+  text-align: center;
 `;
-
-const Title = styled.h1``;
 
 const DescriptionZone = styled.div`
   display: flex;
@@ -52,51 +68,63 @@ const DescriptionZone = styled.div`
     margin: 0;
     padding: 0;
   }
+  padding: 10px;
+`;
+
+const Footer = styled.footer`
+  padding: 30px;
 `;
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>
+      <SpaceBetween>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
-        <Title>Projects I've worked on</Title>
+      </SpaceBetween>
+      <Title>Projects I've worked on</Title>
+      <FlexContainer>
+        <DescriptionZone>
+          <Subtitle>kolors.com.mx</Subtitle>
+          <Description>
+            Joining the Kolors team marked the beginning of an exciting chapter
+            in my career, where I had the opportunity to spearhead the
+            implementation of the company's current design aesthetic.
+          </Description>
+        </DescriptionZone>
+        <FullSizeIframe src="https://kolors.com.mx/" />
+        <DescriptionZone>
+          <Subtitle>Kolors (Business To Business)</Subtitle>
+          <Description>
+            This was my first project when joining the company. I was asked to
+            create this website from scratch using only a Figma design, and it
+            turned out looking great!
+          </Description>
+        </DescriptionZone>
+        <FullSizeIframe src="https://kolorsbiz.com.mx/" />
+        <DescriptionZone>
+          <Subtitle>Kolors Mobile</Subtitle>
+          <Description>
+            I was responsible for adding new sections, debugging API calls and
+            fixing visual errors, adding form validations and showing
+            human-readable errors.
+          </Description>
+        </DescriptionZone>
+        <FullSizeIframe src="https://kolorsmobile.com.mx/" />
+      </FlexContainer>
 
-        <FlexContainer>
-          <DescriptionZone>
-            <Subtitle>kolors.com.mx</Subtitle>
-            <Description>
-              Joining the Kolors team marked the beginning of an exciting
-              chapter in my career, where I had the opportunity to spearhead the
-              implementation of the company's current design aesthetic.
-            </Description>
-          </DescriptionZone>
-          <FullSizeIframe src="https://kolors.com.mx/" />
-          <DescriptionZone>
-            <Subtitle>Kolors (Business To Business)</Subtitle>
-            <Description>
-              This was my first project when joining the company. I was asked to
-              create this website from scratch using only a Figma design, and it
-              turned out looking great!
-            </Description>
-          </DescriptionZone>
-          <FullSizeIframe src="https://kolorsbiz.com.mx/" />
-          <DescriptionZone>
-            <Subtitle>Kolors Mobile</Subtitle>
-            <Description>
-              I was responsible for adding new sections, debugging API calls and
-              fixing visual errors.
-            </Description>
-          </DescriptionZone>
-          <FullSizeIframe src="https://kolorsmobile.com.mx/" />
-        </FlexContainer>
-      </div>
+      <Footer>
+        <a
+          href="https://www.flaticon.com/free-icons/rainbow"
+          title="rainbow icons"
+        >
+          Rainbow icons created by Freepik - Flaticon
+        </a>
+      </Footer>
     </>
   );
 }
