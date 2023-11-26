@@ -32,7 +32,7 @@ const SpaceBetween = styled.div`
 `;
 
 const Subtitle = styled.h2`
-  color: #1e205f;
+  color: #b396f2;
 
   @media (min-width: 640px) {
     font-size: 32px;
@@ -40,7 +40,7 @@ const Subtitle = styled.h2`
 `;
 
 const Title = styled.h1`
-  color: #1e205f;
+  color: #e2e2e2;
   font-size: 31px;
 
   @media (min-width: 640px) {
@@ -49,7 +49,7 @@ const Title = styled.h1`
 `;
 
 const Description = styled.p`
-  color: #1a237e;
+  color: #7d7fc8;
   font-size: 14px;
   line-height: 17px;
   font-weight: 500;
