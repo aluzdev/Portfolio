@@ -87,7 +87,13 @@ function App() {
             </Description>
           </DescriptionZone>
           <FullSizeIframe src="https://kolorsbiz.com.mx/" />
-          <Subtitle>Kolors Mobile</Subtitle>
+          <DescriptionZone>
+            <Subtitle>Kolors Mobile</Subtitle>
+            <Description>
+              I was responsible for adding new sections, debugging API calls and
+              fixing visual errors.
+            </Description>
+          </DescriptionZone>
           <FullSizeIframe src="https://kolorsmobile.com.mx/" />
         </FlexContainer>
       </div>
